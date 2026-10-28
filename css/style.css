@@ -1,0 +1,28 @@
+
+.logoSideBar{
+    display: flex;
+    align-items: center;
+        
+}
+.asideOptions{
+    display: flex;
+    align-items: center;
+}
+.splitMate{
+    font-size: 25px;
+    span{
+        color: red;
+    }
+}
+.asideBar i{
+    color: red;
+    border-radius: 10px;
+}
+.asideBar{
+    position: fixed;
+    width: 260px;
+    background-color: rgb(143, 150, 151);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
