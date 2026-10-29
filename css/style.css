@@ -41,13 +41,34 @@
 .page-section header{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 25px;
     
 }
 .hero-section{
+    padding-top:50px ;
+    
+    
+    
+}
+.flex-spc-btwn{
     display: flex;
     justify-content: space-around;
 }
 .border-hero{
-    background-color:transparent ;
+    background-color:white;
     display: flex;
+    border-radius: 10px;
+    width: 300px;
+}
+.depences{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cart-depences{
+    display: flex;
+    align-items: center;
+    width: 700px;
+    background-color: white;
+    justify-content: space-around;
 }
