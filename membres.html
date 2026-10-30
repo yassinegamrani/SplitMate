@@ -60,27 +60,36 @@
           <h3>Membres</h3>
           <p>Retrouvez les personnes de vos groupes.</p>
         </div>
-        <button style="background-color: red; padding: 0px 30px">
-          <i class="fa-solid fa-plus"></i>
-          <h3>Nouvelle dépense</h3>
-        </button>
+        <a href="depenses.html">
+            <button style="background-color: red; padding: 0px 30px">
+              <i class="fa-solid fa-plus"></i>
+              <h3>Nouvelle dépense</h3>
+            </button>
+        </a>
       </header>
       <main style="
         background-color: #f8fafc;
         padding-bottom: 400px;
         ">
         
-        <div class="card">
+        <div class="card-membre">
           <div class="card-header">
             <div class="avatar">G</div>
           </div>
           <h3>gamrani</h3>
-          <p class="email">yassine@gmail.com</p>
+          <p class="email">slogger.844</p>
 
           <hr>
           <div class="groups">
             <span><i class="fa-regular fa-user"></i></span>
-            <span>3 groupes</span>
+            <form id="form-groups">
+              <select name="select-group" id="selectGroup">
+                <option value="">select votre option</option>
+                <option value="group-1">group 1</option>
+                <option value="group-2">group 2</option>
+                <option value="group-3">group 3</option>
+              </select>
+            </form>
           </div>
           <br>
            <button class="profile-btn">Voir le profil</button>
