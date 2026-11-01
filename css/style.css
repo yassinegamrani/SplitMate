@@ -102,6 +102,11 @@ p {
   background-color: white;
   justify-content: space-around;
 }
+.groupeSection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 .cardItem {
   display: flex;
   flex-direction: column;
@@ -115,7 +120,7 @@ p {
   display: flex;
   justify-content: space-between;
 }
-.cardDascription {
+.cardDescription {
   display: flex;
   flex-direction: column;
 }
@@ -240,6 +245,6 @@ td {
         background-color: blueviolet;
         padding: 17px 20px ;
         border-radius: 50%;
-        font-style: ;
+        
     }
 }
