@@ -234,17 +234,59 @@ td {
 /* page de membres */
 .card-membre{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     padding: 1.5rem;
-    border: solid 2px ;
     max-width: calc(30% - 20px);
+    height: 200px;
     border-radius: 15px;
     gap: 1.5rem;
+    .style-card{
+        border: 2px solid;
+        width: 500px;
+        
+        border-radius: 12px;
+    }
     .avatar{
-        background-color: blueviolet;
-        padding: 17px 20px ;
-        border-radius: 50%;
+        border-radius: 12px 12px 0px 0px;
+        background-color: #ff0000;
         
     }
+}
+.form-input-mumbers {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input-mumbers h3 {
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.form-input-mumbers p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-input-mumbers label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.form-input-mumbers input,
+.form-input-mumbers select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.form-input-mumbers input:focus,
+.form-input-mumbers select:focus {
+    border-color: #6366f1;
 }

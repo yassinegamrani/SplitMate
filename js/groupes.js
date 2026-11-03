@@ -40,7 +40,7 @@ const showgroupe = () => {
   groupes.forEach((groupe) => {
     groupeSection.innerHTML += ` <article class="groupCard cardItem">
                     <div class="cardHead">
-                        <i class="fa-solid fa-house"></i>
+                        <i class="fa-solid fa-users-gear"></i>
                         <span inputmode="">status</span>
                     </div>
                     <div class="cardDescription">
