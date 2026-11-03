@@ -60,20 +60,42 @@
           <h3>Membres</h3>
           <p>Retrouvez les personnes de vos groupes.</p>
         </div>
-        <a href="depenses.html">
-            <button style="background-color: red; padding: 0px 30px">
-              <i class="fa-solid fa-plus"></i>
-              <h3>Nouvelle dépense</h3>
-            </button>
-        </a>
       </header>
       <main style="
         background-color: #f8fafc;
         padding-bottom: 400px;
         ">
+        <div class="form-input-mumbers">
+
+
+          <div>
+            <h3> Ajouter un membre</h3>
+            <p>Renseignez ses coordonnées et choisissez son groupe.</p>
+          </div>
+           <div>
+              <label for="membreName">Nom complet :</label>
+              <input type="text" id="membreName">
+            </div>
+            <div>
+                <label for="membreUserName">User name :</label>
+                <input type="text" id="membreUserName">
+            </div>
+            <form id="form-groups">
+                <label for="optionselect">Groupe :</label>
+                <select name="select-group" id="selectGroup">
+                  <option value="">select votre option</option>
+                  <option value="group-1">group 1</option>
+                  <option value="group-2">group 2</option>
+                  <option value="group-3">group 3</option>
+                </select>
+            </form>
+            <button id="submitMember" style="height: 30px; background-color: aliceblue;">Submit</button>
+            
+          </div>
+        </div>
         
         <div class="card-membre">
-          <div class="card-header">
+          <!-- <div class="card-header">
             <div class="avatar">G</div>
           </div>
           <h3>gamrani</h3>
@@ -82,19 +104,13 @@
           <hr>
           <div class="groups">
             <span><i class="fa-regular fa-user"></i></span>
-            <form id="form-groups">
-              <select name="select-group" id="selectGroup">
-                <option value="">select votre option</option>
-                <option value="group-1">group 1</option>
-                <option value="group-2">group 2</option>
-                <option value="group-3">group 3</option>
-              </select>
-            </form>
+            
           </div>
           <br>
-           <button class="profile-btn">Voir le profil</button>
+           <button class="profile-btn">Voir le profil</button> -->
         </div>
 
       </main>
+      <script src="/js/membres.js"></script>
 </body>
 </html>
