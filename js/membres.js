@@ -1,11 +1,13 @@
 let members = []
-let idMember = 1 ;
+
 const membreName = document.querySelector("#membreName");
 const membreUserName = document.querySelector("#membreUserName");
 const selectGroup = document.querySelector("#selectGroup");
 const submitMember = document.getElementById("submitMember");
 const formMumbers = document.querySelector("#form-input-mumbers");
 const cardMembre = document.querySelector('.card-membre')
+const memberSupprim = document.querySelector("#memberSupprim")
+
 
 
 cardMembre.innerHTML=''
@@ -28,7 +30,7 @@ submitMember.addEventListener("click", function (e) {
 })
 function creationMember(){
     let member = {
-        id : idMember++, 
+        id : Date.now(), 
         name  : membreName.value,
         user : membreUserName.value,
         groupe : selectGroup.value,
@@ -44,7 +46,7 @@ function affichagecards(members){
   cardMembre.innerHTML = "" ;
   members.forEach(member => {
     cardMembre.innerHTML += `
-        <div class="style-card">
+        <div class="style-card" data-id="${member.id}">
             <div class="card-header">
             <div class="avatar"> VOTRE ID : ${member.id}</div>
           </div>
@@ -54,13 +56,25 @@ function affichagecards(members){
             <span><i class="fa-regular fa-user"></i></span>
           </div>
            <h3>GROUPE NAME : ${member.groupe}</h3>
-           <div style="margin-left:70px">
+           <div style="margin-left:90px">
               <button>Modifier</button>
-              <button>Supprimer</button>
+              <button id="memberSupprim" onClick="supprimerMember(${member.id})">Supprimer</button>
            </div>
           </div>
         </div>`
+        
   });
 }
+
+
+window.supprimerMember =  function(id){
+  console.log(id)
+  members = members.filter(member => member.id != id)
+  affichagecards(members)
+}
+
+
+  
+
 
 
