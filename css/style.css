@@ -254,7 +254,7 @@ td {
         
     }
 }
-.form-input-mumbers {
+.form-input {
     max-width: 400px;
     margin: 30px auto;
     padding: 20px;
@@ -263,32 +263,38 @@ td {
     gap: 15px;
 }
 
-.form-input-mumbers h3 {
+.form-input h3 {
     margin: 0 0 8px;
     text-align: center;
 }
 
-.form-input-mumbers p {
+.form-input p {
     text-align: center;
     font-size: 14px;
 }
 
-.form-input-mumbers label {
-    display: block;
+.form-input label {
     margin-bottom: 6px;
     font-size: 14px;
 }
 
-.form-input-mumbers input,
-.form-input-mumbers select {
+.form-input input,
+.form-input select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 6px;
-    box-sizing: border-box;
+    
 }
 
-.form-input-mumbers input:focus,
-.form-input-mumbers select:focus {
+.form-input input:focus,
+.form-input select:focus {
     border-color: #6366f1;
+    }
+
+.hidden{
+  display: none;
+}
+.visible{
+  display: inline;
 }

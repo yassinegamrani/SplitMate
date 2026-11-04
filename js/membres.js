@@ -1,4 +1,4 @@
-let members = [];
+export let members = [{id: 1,nom: "lala" , user: "lalaland", groupe: "groupe01"}]
 
 const membreName = document.querySelector("#membreName");
 const membreUserName = document.querySelector("#membreUserName");

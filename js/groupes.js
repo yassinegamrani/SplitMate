@@ -1,4 +1,4 @@
-let groupes = [];
+export let groupes = [];
 let editID = null;
 let groupeId = 0;
 import {
@@ -11,8 +11,8 @@ import {
   grpEditBtn,
   grpDltBtn,
 } from "./ui.js";
-
-const creategroupe = () => {
+import { getData, saveData } from "./storage.js";
+const creategroupe = (g) => {
   if (
     grpName.value.trim() === "" ||
     grpDescription.value.trim() === "" ||
@@ -30,23 +30,17 @@ const creategroupe = () => {
     date: grpDate.value,
     cloture: false,
   };
-  if (editID !== null){
-     groupes = groupes.map(g =>
-            g.id === editID
-                ? { ...g, ...groupe }
-                : g
-        );
+  if (editID !== null) {
+    groupes = groupes.map((g) => (g.id === editID ? { ...g, ...groupe } : g));
 
-        editID = null;
+    editID = null;
 
-        grpSubBtn.textContent = "Ajouter le groupe";
-  }
-  else{
+    grpSubBtn.textContent = "Ajouter le groupe";
+  } else {
     groupes.push(groupe);
-  console.log(groupe);
-  console.log(groupes);
-
-  
+    console.log(groupe);
+    console.log(groupes);
+    saveData("groupes", groupes);
   }
   grpName.value = "";
   grpDescription.value = "";
@@ -54,6 +48,7 @@ const creategroupe = () => {
   grpDate.value = "";
   groupeSection.innerHTML = "";
   showgroupe();
+  
 };
 
 const showgroupe = () => {
@@ -132,5 +127,8 @@ const actionBtn = (e) => {
 
 //------ EVent listenners ------//
 
-grpSubBtn.addEventListener("click", creategroupe);
+grpSubBtn.addEventListener("click", function (e) {
+  e.preventDefault()
+  creategroupe()
+});
 groupeSection.addEventListener("click", actionBtn);
