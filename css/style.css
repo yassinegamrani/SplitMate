@@ -290,4 +290,11 @@ td {
 .form-input input:focus,
 .form-input select:focus {
     border-color: #6366f1;
+    }
+
+.hidden{
+  display: none;
+}
+.visible{
+  display: inline;
 }

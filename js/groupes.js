@@ -48,6 +48,7 @@ const creategroupe = (g) => {
   grpDate.value = "";
   groupeSection.innerHTML = "";
   showgroupe();
+  
 };
 
 const showgroupe = () => {
