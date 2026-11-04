@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
     integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="./js/depenses.js"></script>
 </head>
 
 <body>
@@ -64,13 +65,13 @@
         <h3>Ajouter une dépense</h3>
         <p>Remplissez tous les champs pour ajouter une dépense :</p>
         <label for="titreDepense">Titre de la dépense :</label>
-        <input type="text" placeholder="veuillez entrer le titre de la dépense">
+        <input type="text" placeholder="veuillez entrer le titre de la dépense" id="titreDepense">
         <div>
           <label for="montantDepense">Montant :</label>
-          <input type="number" placeholder="entrer le montant de la dépense">
+          <input type="number" placeholder="entrer le montant de la dépense" id="montantDepense">
 
           <label for="dateDepense">Date de création de dépense :</label>
-          <input type="date" placeholder="Date de création">
+          <input type="date" placeholder="Date de création" id="dateDepense">
         </div>
         <div>
           <label for="categorieDepense">Catégorie de Dépense :</label>
@@ -80,11 +81,21 @@
             <option value="Foyer">Foyer</option>
           </select>
           <label for="payeurDepense">Payeur :</label>
-          <select name="payeur" id="payeurDepense">
+          <select name="payeur" id="payeurDepense" >
             <option value="">person1</option>
             <option value="">person2</option>
             <option value="">person3</option>
           </select>
+          <label for="membresConcernes">Membres concernés:</label>
+          <select name="membres concernes " id="membresConcernes" >
+            <option value="">person1</option>
+            <option value="">person2</option>
+            <option value="">person3</option>
+          </select>
+        </div>
+        <div>
+          <button type="button" class="visible hidden">Ajouter une dépense</button>
+          <button type="button" class="visible hidden">Modifier une dépense</button>
         </div>
       </form>
       <div class="search-inputContainer">
@@ -100,7 +111,7 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th>Groupe</th>
+            <th>Catégorie</th>
             <th>Payeur</th>
             <th>Date</th>
             <th>Montant</th>
@@ -128,8 +139,8 @@
             </td>
 
             <td>
-              <button type="button" aria-label="Plus d'actions">Edit</button>
-              <button type="button" >Delete</button>
+              <button type="button" id="depenseEditBtn">Edit</button>
+              <button type="button" id="depenseDltBtn">Delete</button>
             </td>
           </tr>
         </tbody>
