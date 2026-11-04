@@ -43,7 +43,6 @@ function creationMember(){
 function affichagecards(members){
   cardMembre.innerHTML = "" ;
   members.forEach(member => {
-    
     cardMembre.innerHTML += `
         <div class="style-card">
             <div class="card-header">
@@ -61,7 +60,6 @@ function affichagecards(members){
            </div>
           </div>
         </div>`
-    
   });
 }
 
