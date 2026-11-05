@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SplitMate</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/groupes.js" defer type="module"></script>
+</head>
+
+<body>
+    <aside class="asideBar">
+      <header>
+        <div class="logoSideBar">
+          <i class="fa-solid fa-wallet"></i>
+          <h3 class="splitMate">&ensp;Split<span>Mate</span></h3>
+        </div>
+      </header>
+      <br /><br /><br /><br /><br /><br />
+      <main>
+        <div>
+          <div class="asideOptions">
+            <i class="fa-solid fa-border-all"></i>
+            <a href="index.html">&ensp;&ensp;Tableau de bord</a>
+          </div>
+          <br /><br />
+          <div class="asideOptions">
+            <i class="fa-solid fa-users-rectangle"></i>
+            <a href="groupes.html">&ensp;&ensp;Mes groupes</a>
+          </div>
+          <br /><br />
+          <div class="asideOptions">
+            <i class="fa-solid fa-users"></i>
+            <a href="membres.html">&ensp;&ensp;Membres</a>
+          </div>
+          <br /><br />
+          <div class="asideOptions">
+            <i class="fa-solid fa-wallet"></i>
+            <a href="depenses.html">&ensp;&ensp;Dépenses</a>
+          </div>
+          <br /><br /><br /><br /><br />
+        </div>
+      </main>
+      <br /><br /><br /><br /><br /><br /><br />
+      <footer>
+        <div>
+          <h3>Yasiine Gamrani</h3>
+          <p>gamrani@gmr.com</p>
+        </div>
+      </footer>
+    </aside>
+    <section class="page-section">
+        <header>
+            <div>
+                <h3>Mes groupes</h3>
+                <p>Gérez vos groupes et leurs dépenses partagées.</p>
+            </div>
+        </header>
+
+        <main class="hero-section" style="background-color: #F8FAFC; margin: -20px">
+            <form id="grpFrom" class="form-input">
+                <h3>
+                    Créer un groupe
+                </h3>
+                <p>
+                    Ajoutez les informations principales de votre groupe.
+                </p>
+                <div>
+                    <label for="grpName">Nom de groupe :</label>
+                    <input type="text" id="grpName">
+                </div>
+                <div>
+                    <label for="grpDescription">Description de groupe :</label>
+                    <input type="text" id="grpDescription">
+                </div>
+                <div>
+                    <label for="grpDevise">Devise</label>
+                    <select name="devise" id="grpDevise">
+                        <option value="MAD">MAD</option>
+                        <option value="$">$</option>
+                        <option value="£">£</option>
+
+                    </select>
+                    <label for="grpDate">launch day</label>
+                    <input type="date" id="grpDate">
+                </div>
+                <div>
+                    <button type="button" id="grpSubBtn">Submit</button>
+                    <button type="reset" id="grpClrBtn">Clear</button>
+                </div>
+            </form>
+            <section id="groupeSection">
+                <!-- <article class="groupCard cardItem">
+                    <div class="cardHead">
+                        <i class="fa-solid fa-house"></i>
+                        <span inputmode="">status</span>
+                    </div>
+                    <div class="cardDescription">
+                        <div class="cardDesContent">
+                            <h2 id="groupeName">Colocation République</h2>
+                            <p id="groupeDescription">Dépenses courantes de notre appartement</p>
+                        </div>
+                        <div class="cardData">
+                            <div class="cardData1">
+                                <i class="fa-solid fa-coins"></i>
+                                <p>Currency :<span id="groupeDevise"> $</span></p>
+                            </div>
+                            <div class="cardData2">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <p id="groupDate">Date of creation : 18/01/04</p>
+                            </div>
+                            <div class="cardData3">
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+                                <p id="groupTotal">Total : 5000$</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardBtns">
+                        <button type="button" id="grpEditBtn">Modifier le groupe</button>
+                        <button type="button" id="grpDltBtn">Supprimer le groupe</button>
+                    </div>
+                </article> -->
+            </section>
+        </main>
+    </section>
+
+</body>
+
+</html>

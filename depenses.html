@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SplitMate</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="./js/depenses.js" defer></script>
+</head>
+
+<body>
+  <aside class="asideBar">
+    <header>
+      <div class="logoSideBar">
+        <i class="fa-solid fa-wallet"></i>
+        <h3 class="splitMate">&ensp;Split<span>Mate</span></h3>
+      </div>
+    </header>
+    <br /><br /><br /><br /><br /><br />
+    <main>
+      <div>
+        <div class="asideOptions">
+          <i class="fa-solid fa-border-all"></i>
+          <a href="index.html">&ensp;&ensp;Tableau de bord</a>
+        </div>
+        <br /><br />
+        <div class="asideOptions">
+          <i class="fa-solid fa-users-rectangle"></i>
+          <a href="groupes.html">&ensp;&ensp;Mes groupes</a>
+        </div>
+        <br /><br />
+        <div class="asideOptions">
+          <i class="fa-solid fa-users"></i>
+          <a href="membres.html">&ensp;&ensp;Membres</a>
+        </div>
+        <br /><br />
+        <div class="asideOptions">
+          <i class="fa-solid fa-wallet"></i>
+          <a href="depenses.html">&ensp;&ensp;Dépenses</a>
+        </div>
+        <br /><br /><br /><br /><br />
+      </div>
+    </main>
+    <br /><br /><br /><br /><br /><br /><br />
+    <footer>
+      <div>
+        <h3>Yasiine Gamrani</h3>
+        <p>gamrani@gmr.com</p>
+      </div>
+    </footer>
+  </aside>
+  <section class="page-section">
+    <header>
+      <div>
+        <h2>Mes groupes</h2>
+        <p>Gérez vos groupes et leurs dépenses partagées.</p>
+      </div>
+    </header>
+
+    <main class="hero-section" style="background-color: #f8fafc; margin: -20px">
+      <form class="form-input">
+        <h3>Ajouter une dépense</h3>
+        <p>Remplissez tous les champs pour ajouter une dépense :</p>
+        <label for="titreDepense">Titre de la dépense :</label>
+        <input type="text" placeholder="veuillez entrer le titre de la dépense" id="titreDepense">
+        <div>
+          <label for="montantDepense">Montant :</label>
+          <input type="number" placeholder="entrer le montant de la dépense" id="montantDepense">
+
+          <label for="dateDepense">Date de création de dépense :</label>
+          <input type="date" placeholder="Date de création" id="dateDepense">
+        </div>
+        <div>
+          <label for="categorieDepense">Catégorie de Dépense :</label>
+          <select name="categorie" id="categorieDepense">
+            <option value="Voyage">Voyage</option>
+            <option value="Course">Course</option>
+            <option value="Foyer">Foyer</option>
+          </select>
+          <label for="payeurDepense">Payeur :</label>
+          <select name="payeur" id="payeurDepense" >
+            <option value="">person1</option>
+            <option value="">person2</option>
+            <option value="">person3</option>
+          </select>
+          <label for="membresConcernes">Membres concernés:</label>
+          <select name="membres concernes " id="membresConcernes" >
+            <option value="">person1</option>
+            <option value="">person2</option>
+            <option value="">person3</option>
+          </select>
+        </div>
+        <div>
+          <button type="button" class="visible hidden" id="depenseAddBtn">Ajouter une dépense</button>
+          <button type="button" class="visible hidden">Modifier une dépense</button>
+        </div>
+      </form>
+      <div class="search-inputContainer">
+        <label for="searchInput"><i class="fa-solid fa-magnifying-glass"></i></label>
+        <input type="text" id="searchInput" placeholder="Rechercher une dépense..." />
+
+        <button type="button" class="action-btn">
+          <span>+</span>
+          Ajouter une dépense
+        </button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Catégorie</th>
+            <th>Payeur</th>
+            <th>Date</th>
+            <th>Montant</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span>🛒</span>
+              <strong>Courses Carrefour</strong>
+            </td>
+
+            <td>Colocation République</td>
+
+            <td>
+              <span>K</span>
+              Karim
+            </td>
+
+            <td>18 janvier 2004</td>
+
+            <td>
+              <strong>54,40 €</strong>
+            </td>
+
+            <td>
+              <button type="button" id="depenseEditBtn">Edit</button>
+              <button type="button" id="depenseDltBtn">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </section>
+</body>
+
+</html>
