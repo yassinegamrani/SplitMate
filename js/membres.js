@@ -8,6 +8,7 @@ const formMumbers = document.querySelector("#form-input-mumbers");
 const cardMembre = document.querySelector(".card-membre");
 const memberSupprim = document.querySelector("#memberSupprim");
 const modifyMember = document.querySelectorAll("modifyMember");
+const modifierMember = document.getElementById('modifierMember')
 
 
 submitMember.addEventListener('click', function (e) {
@@ -70,15 +71,35 @@ window.supprimerMember = function (id) {
 
 
 window.modifyMember = function (id) {
+  submitMember.classList.add('hidden')
+  modifierMember.classList.remove('hidden')
   console.log(id);
   let modifMemb = members.find((member) => member.id == id);
   console.log(modifMemb);
   membreName.value = modifMemb.name;
   membreUserName.value = modifMemb.user;
   selectGroup.value = modifMemb.groupe;
+  modifierMember.dataset.id = modifMemb.id
+  
   
   //   let doneModify = members.filter((member)=> member.id)
   //   affichagecards(doneModify)
   // })
 
 }; 
+modifierMember.addEventListener('click',function(e){
+
+    let modifMemb = members.find((member) => member.id == e.target.dataset.id);
+
+        modifMemb.name = membreName.value
+        modifMemb.user = membreUserName.value
+        modifMemb.groupe = selectGroup.value
+        
+        affichagecards(members)
+        membreName.value = ""
+        membreUserName.value = ""
+        selectGroup.value = ""
+        submitMember.classList.remove('hidden')
+        modifierMember.classList.add('hidden')
+
+  })
