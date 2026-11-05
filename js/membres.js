@@ -1,16 +1,16 @@
-export let members = [{id: 1,nom: "lala" , user: "lalaland", groupe: "groupe01"}]
+export let members = []
 
 const membreName = document.querySelector("#membreName");
 const membreUserName = document.querySelector("#membreUserName");
 const selectGroup = document.querySelector("#selectGroup");
-const submitMember = document.getElementById("submitMember");
+const submitMember = document.querySelector("#submitMember");
 const formMumbers = document.querySelector("#form-input-mumbers");
 const cardMembre = document.querySelector(".card-membre");
 const memberSupprim = document.querySelector("#memberSupprim");
 const modifyMember = document.querySelectorAll("modifyMember");
 
-cardMembre.innerHTML = "";
-submitMember.addEventListener("click", function (e) {
+
+submitMember.addEventListener('click', function (e) {
   e.preventDefault();
   if (
     membreName.value.trim() == "" ||

@@ -97,7 +97,10 @@ const editgroupe = (groupe) => {
 
   // console.log(groupe);
 };
-
+grpSubBtn.addEventListener("click", function (e) {
+  e.preventDefault()
+  creategroupe()
+});
 const actionBtn = (e) => {
   const card = e.target.closest(".groupCard");
 
@@ -125,10 +128,7 @@ const actionBtn = (e) => {
   }
 };
 
-//------ EVent listenners ------//
 
-grpSubBtn.addEventListener("click", function (e) {
-  e.preventDefault()
-  creategroupe()
-});
+
+
 groupeSection.addEventListener("click", actionBtn);
