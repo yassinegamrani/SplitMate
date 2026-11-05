@@ -79,8 +79,18 @@ window.modifyMember = function (id) {
   membreName.value = modifMemb.name;
   membreUserName.value = modifMemb.user;
   selectGroup.value = modifMemb.groupe;
+  modifierMember.dataset.id = modifMemb.id
+  
+  
+  //   let doneModify = members.filter((member)=> member.id)
+  //   affichagecards(doneModify)
+  // })
 
-  modifierMember.addEventListener('click',function(){
+}; 
+modifierMember.addEventListener('click',function(e){
+
+    let modifMemb = members.find((member) => member.id == e.target.dataset.id);
+
         modifMemb.name = membreName.value
         modifMemb.user = membreUserName.value
         modifMemb.groupe = selectGroup.value
@@ -93,9 +103,3 @@ window.modifyMember = function (id) {
         modifierMember.classList.add('hidden')
 
   })
-  
-  //   let doneModify = members.filter((member)=> member.id)
-  //   affichagecards(doneModify)
-  // })
-
-}; 
